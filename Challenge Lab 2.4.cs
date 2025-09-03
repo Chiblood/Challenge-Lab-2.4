@@ -56,12 +56,14 @@ namespace Challenge_Lab_2._4
 
         public static void Main(string[] args)
         {
-            Student student = new Student();
-            student.RollNumber = GetUserInput<int>("Input the Roll Number of the student: ", "Please enter a valid whole number.");
-            student.Name = GetRequiredString("Input the Name of the Student: ");
-            student.PhysicsMarks = GetUserInput<int>("Input the marks of Physics: ", "Please enter a valid whole number.");
-            student.ChemistryMarks = GetUserInput<int>("Input the marks of Chemistry: ", "Please enter a valid whole number.");
-            student.ComputerApplicationMarks = GetUserInput<int>("Input the marks of Computer Application: ", "Please enter a valid whole number.");
+            Student student = new Student
+            {
+                RollNumber = GetUserInput<int>("Input the Roll Number of the student: ", "Please enter a valid whole number."),
+                Name = GetRequiredString("Input the Name of the Student: "),
+                PhysicsMarks = GetUserInput<int>("Input the marks of Physics: ", "Please enter a valid whole number."),
+                ChemistryMarks = GetUserInput<int>("Input the marks of Chemistry: ", "Please enter a valid whole number."),
+                ComputerApplicationMarks = GetUserInput<int>("Input the marks of Computer Application: ", "Please enter a valid whole number.")
+            };
             Console.WriteLine($"\n--- Student Report ---");
             Console.WriteLine($"Roll No: {student.RollNumber}");
             Console.WriteLine($"Name of Student: {student.Name}");
