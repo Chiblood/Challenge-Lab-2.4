@@ -90,7 +90,7 @@ class Menu
     }
     public static void AddGradesToStudent()
     {
-        Console.WriteLine("Add Grades to Student selected.");
+        Console.WriteLine("\n--- Add Grades to Student selected. ---");
         int studentID = GetUserInput<int>("Enter Student ID: ");
         var student = Student.StudentsList.FirstOrDefault(s => s.StudentID == studentID);
         if (student == null)
@@ -102,5 +102,6 @@ class Menu
         decimal score = GetUserInput<decimal>("Enter Score: ", "Invalid input. Please enter a valid decimal number.");
         student.AddGrade(subjectName, score);
         Console.WriteLine($"Added grade {score} for subject {subjectName} to student {student.FullName}.");
+        student.SaveStudent();
     }
 }

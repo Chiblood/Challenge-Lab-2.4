@@ -105,7 +105,6 @@ class Student
                     writer.WriteLine($"  Subject: {grade.SubjectName}, Score: {grade.Score}, Date: {grade.GradeDate:yyyy-MM-dd}");
                 }
             }
-            Console.WriteLine($"Student data saved to: {fullPath}");
         }
         catch (Exception ex)
         {

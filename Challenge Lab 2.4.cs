@@ -18,30 +18,27 @@ namespace Challenge_Lab_2._4
         public static void Main(string[] args)
         {
             // Test Data
-            Student John = new(0001, "John", "Devries");
+            Student John = new(1, "John", "Devries");
             John.AddGrade("Math", 90);
             John.AddGrade("Physics", 85);
             John.AddGrade("Computer Application", 95);
             John.SaveStudent();
 
 
-            Student Jane = new(0002, "Jane", "Smith");
+            Student Jane = new(2, "Jane", "Smith");
             Jane.AddGrade("Math", 80);
             Jane.AddGrade("Physics", 75);
             Jane.AddGrade("Computer Application", 85);
             Jane.SaveStudent();
 
-            Student Jim = new(0003, "Jim", "Brown");
+            Student Jim = new(3, "Jim", "Brown");
             Jim.AddGrade("Math", 70);
             Jim.AddGrade("Physics", 65);
             Jim.AddGrade("Computer Application", 75);
             Jim.SaveStudent();
 
             // Main Menu
-            do
-            {
-                Menu.MainMenu();
-            } while (Menu.MainMenu());
+            while (Menu.MainMenu()) { }
         }
     }
 }
