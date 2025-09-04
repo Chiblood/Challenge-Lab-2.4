@@ -2,10 +2,12 @@
 class Student
 {
     // This static list will hold all student objects created during the program's run.
-    public static List<Student> StudentsList { get; } = new();
+    public static List<Student> StudentsList { get; } = [];
 
     public int StudentID { get; set; }
-    public int TeacherID { get; set; } = 1; // default TeacherID for simplicity
+    public int TeacherID { get; set; } = 1; // default TeacherID for simplicity, only lets one teacher manage all students.
+    // How can I build a multiple teacher system?
+    // Maybe have a Teacher class with a list of Students?
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string FullName => $"{FirstName} {LastName}".Trim();
